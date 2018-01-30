@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Android shutdown</string>
+    <string name="shutdown">Shutdown Device</string>
+</resources>
