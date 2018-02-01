@@ -35,13 +35,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 try {
-                    shutdown.setColorFilter(getResources().getColor(R.color.colorPrimary));
-                    Toast.makeText(getApplicationContext(),"Shutting down ...",Toast.LENGTH_LONG).show();
+
                     Process proc = Runtime.getRuntime()
                             .exec(new String[]{ "su", "-c", "reboot -p" });
 
 
                     proc.waitFor();
+                    shutdown.setColorFilter(getResources().getColor(R.color.colorPrimary));
+                    Toast.makeText(getApplicationContext(),"Shutting down ...",Toast.LENGTH_LONG).show();
 
                 } catch (Exception ex) {
 
